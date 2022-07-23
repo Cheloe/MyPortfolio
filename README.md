@@ -8,7 +8,8 @@ Create a responsive professional portfolio site
 3. Created and Cloned GitHub repository
 4. Started this Readme
 5. Created Pages for projects, about me etc.
-6. 
+6. Added and styled header and nav items
+7. Added and styled hero image
 
 ## Portfolio Checklist
 

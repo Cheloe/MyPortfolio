@@ -10,6 +10,14 @@ Create a responsive professional portfolio site
 5. Created Pages for projects, about me etc.
 6. Added and styled header and nav items
 7. Added and styled hero image
+8. Added About and Work Sections. Styled same.
+9. Created Project card. Styled same.
+
+
+##To Do
+
+1. Figure out how to stick section titles to sections rather than try to force margins.
+
 
 ## Portfolio Checklist
 

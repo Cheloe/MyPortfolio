@@ -14,19 +14,10 @@ body {
     background-color: var(--light-gray);
 }
 
-main {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-/* header {
-    
-} */
-
 nav {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items:flex-start;
     background-color: var(--gray);
 }
 
@@ -52,8 +43,8 @@ nav li {
     padding: 10px;
     margin:auto 10px;
     font-size: 18px;
-    font-weight: 600;
-    color: var(--light-gray);
+    font-weight: 700;
+    color: var(--seafoam);
 }
 
 .hero-image {
@@ -61,4 +52,96 @@ nav li {
     width: 100%;
     object-fit: cover;
     object-position: top;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+.about {
+    display: flex;
+    flex-direction: row;
+    align-items: top;
+    height: fit-content;
+    border: solid black 1px;
+}
+
+.title {
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    /* border-right: solid 4px var(--navy); */
+    padding: 8px 0px 8px 4px;
+    margin: 32px 0px 0px 60px;
+}
+
+h2 {
+    font-size: 56px;
+    font-weight: 500;
+    font-family: sans-serif;
+    text-align: right;
+    color: var(--navy);
+}
+
+.description {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 75%;
+    padding-bottom: 32px;
+    margin-top: 32px;
+    right: 56px;
+}
+
+.description p {
+    padding: 0px 48px 32px 56px;
+    border-left: solid var(--navy);
+    margin-left: 16px;
+    line-height: 150%;
+}
+
+.projects {
+    display: flex;
+    flex-direction: row;
+    align-items: top;
+    height: fit-content;
+    margin-bottom: 48px;
+    border: solid black 1px;
+}
+
+.large-card {
+    display: flex;
+    flex: wrap;
+    flex-direction: column;
+    position: relative;
+    padding: 0px 48px 32px 56px;
+    border-left: solid var(--navy);
+    margin-left: 16px;
+    margin-top: 32px;
+    height: 400px;
+    width: 75%;
+    align-items:baseline;
+}
+
+.large-card img{
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+    border: solid 4px var(--seafoam);
+} 
+
+.float-box {
+    display: flex;
+    flex: wrap;
+    flex-direction:column;
+    flex: 1;
+    position: absolute;
+    bottom: 20%;
+    z-index: 1;
+    background: var(--seafoam);
+    width: fit-content;
+    padding: 16px 16px 16px 20%;
 }

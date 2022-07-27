@@ -7,6 +7,7 @@
     --light-gray: #EDEDF5;
     --seafoam: #9DCBCC;
     --navy: #475875;
+    --dark-navy: #3a475f;
     --gray: #32343C;
 }
 
@@ -14,9 +15,11 @@ body {
     background-color: var(--light-gray);
 }
 
+/* Navigation bar */
 nav {
     display: flex;
     flex-direction: row;
+    position: relative;
     align-items:flex-start;
     background-color: var(--gray);
 }
@@ -31,6 +34,7 @@ nav h1 {
     margin: 24px 32px 16px 0px;
 }
 
+/* Navigation links in header */
 nav ul {
     position: absolute;
     right: 32px;
@@ -47,6 +51,7 @@ nav li {
     color: var(--seafoam);
 }
 
+/* This is the hero image */
 .hero-image {
     height: 400px;
     width: 100%;
@@ -59,22 +64,24 @@ main {
     flex-direction: column;
 }
 
-.about {
-    display: flex;
-    flex-direction: row;
-    align-items: top;
-    height: fit-content;
-    border: solid black 1px;
-}
-
+/* Container for the 
+section titles running down the left column */
 .title {
     width: 15%;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     /* border-right: solid 4px var(--navy); */
-    padding: 8px 0px 8px 4px;
+    padding: 8px px 8px 4px;
     margin: 32px 0px 0px 60px;
+}
+
+/* Container for the about section */
+.about {
+    display: flex;
+    flex-direction: row;
+    align-items: top;
+    height: fit-content;
 }
 
 h2 {
@@ -85,63 +92,94 @@ h2 {
     color: var(--navy);
 }
 
-.description {
+/* Container for the about me */
+.container {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
     width: 75%;
-    padding-bottom: 32px;
+    padding-bottom: 16px;
     margin-top: 32px;
-    right: 56px;
+    margin-left: 16px;
+    margin-bottom: 32px;
+    border-left: solid var(--navy);
 }
 
-.description p {
-    padding: 0px 48px 32px 56px;
-    border-left: solid var(--navy);
+/* Text for the about me */
+.container p {
+    padding: 0px 0px 16px 56px;
     margin-left: 16px;
     line-height: 150%;
 }
 
-.projects {
+/* Container for 'my work' section */
+.work {
     display: flex;
-    flex-direction: row;
-    align-items: top;
-    height: fit-content;
-    margin-bottom: 48px;
-    border: solid black 1px;
+    flex-wrap: wrap;
 }
 
+/* Large card format */
 .large-card {
-    display: flex;
-    flex: wrap;
-    flex-direction: column;
-    position: relative;
-    padding: 0px 48px 32px 56px;
-    border-left: solid var(--navy);
-    margin-left: 16px;
-    margin-top: 32px;
+    padding: 8px 0px 32px 56px;
     height: 400px;
-    width: 75%;
-    align-items:baseline;
+    width: 100%;
 }
 
+/* Image on large card */
 .large-card img{
     height: 400px;
     width: 100%;
     object-fit: cover;
     object-position: top;
     border: solid 4px var(--seafoam);
+    border-radius: 4px;
 } 
 
-.float-box {
-    display: flex;
-    flex: wrap;
-    flex-direction:column;
-    flex: 1;
+/* Text box on large cards */
+.card-header {
     position: absolute;
-    bottom: 20%;
-    z-index: 1;
+    margin-top: -80px;
     background: var(--seafoam);
     width: fit-content;
-    padding: 16px 16px 16px 20%;
+    height: fit-content;
+    padding: 8px 16px 8px 32px;
+    text-align: left;
+    color: var(--dark-navy);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    grid-column-gap: 8px;
+    grid-row-gap: 8px;
+    padding: 0px 0px 32px 56px;
+    margin-top: 16px;
+    width: 100%;
+}
+
+/* small card format */
+.small-card {
+    height: 200px;
+}
+
+/* Image on small card */
+.small-card img{
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+    border: solid 4px var(--seafoam);
+} 
+
+h3 {
+    line-height: 150%;
+    font-size: 24px;
+    font-weight: 600;
+    font-family: sans-serif;
+}
+
+h4 {
+    font-family: serif;
+    font-size: 12px;
+    font-weight: 400;
+    text-transform: uppercase;
 }

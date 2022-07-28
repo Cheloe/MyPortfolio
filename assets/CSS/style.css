@@ -4,128 +4,174 @@
 }
 
 :root {
-    --light-gray: #EDEDF5;
+    --light-gray: #c0c0d5;
     --seafoam: #9DCBCC;
     --navy: #475875;
     --dark-navy: #3a475f;
     --gray: #32343C;
+    --salmon: #DB5461;
 }
 
 body {
     background-color: var(--light-gray);
 }
 
-/* Navigation bar */
-nav {
+header {
     display: flex;
-    flex-direction: row;
-    position: relative;
-    align-items:flex-start;
-    background-color: var(--gray);
 }
 
+/* Navigation bar */
+nav {
+    position:relative;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    background-color: var(--gray);
+    height:fit-content;
+    width: 100%;
+}
+
+/* Nav Title Font */
 nav h1 {
+    display: flex;
     font-size: 40px;
     color: var(--gray);
     font-family:sans-serif;
     font-weight: bold;
-    background-color: var(--seafoam);
-    padding: 16px 16px 12px 80px;
-    margin: 24px 32px 16px 0px;
+    text-align: right;
+    background: var(--seafoam);
+    padding: 8px 12px 4px 56px;
+    margin: 12px 0px 12px 0px;
 }
 
-/* Navigation links in header */
+/* Navigation Links */
 nav ul {
-    position: absolute;
-    right: 32px;
-    margin: 24px;
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: right;
+    margin: 32px auto;
 }
 
 nav li {
-    display: inline-block;
-    border-bottom: solid 3px var(--seafoam);
-    padding: 10px;
-    margin:auto 10px;
-    font-size: 18px;
+    margin: 0px 10px;
+    font-size: 20px;
     font-weight: 700;
     color: var(--seafoam);
+    width: fit-content;
+    padding-bottom: 1px;
+}
+
+nav a:visited, a:link, a:active {
+    color: var(--seafoam);
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: var(--salmon);
+    border-bottom: solid 2px var(--salmon);
+    cursor: pointer;
+    text-decoration: none;
 }
 
 /* This is the hero image */
-.hero-image {
-    height: 400px;
+.hero img {
+    height: 300px;
     width: 100%;
     object-fit: cover;
-    object-position: top;
+    object-position: center;
+}
+
+/* Hero Image Subtitle */
+.hero-header {
+    position: absolute;
+    right: 0px;
+    margin-top: -80px;
+    background: var(--seafoam);
+    /* width: 20%; */
+    padding: 4px 10% 0px 16px;
+    text-align: left;
+    color: var(--dark-navy);
+}
+
+/* Hero Image Font */
+.hero h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--gray);
 }
 
 main {
     display: flex;
     flex-direction: column;
+    padding-top: 12px;
 }
 
-/* Container for the 
-section titles running down the left column */
-.title {
-    width: 15%;
+/* Left-hand column */
+aside {
     display: flex;
+    flex: 1;
     flex-direction: column;
     align-items: flex-end;
-    /* border-right: solid 4px var(--navy); */
     padding: 8px px 8px 4px;
-    margin: 32px 0px 0px 60px;
+    margin: 32px 0px 0px 0px;
 }
 
-/* Container for the about section */
-.about {
+/* Right-hand Column */
+section {
     display: flex;
     flex-direction: row;
-    align-items: top;
-    height: fit-content;
 }
 
+/* Section Titles Font */
 h2 {
-    font-size: 56px;
+    font-size: 40px;
     font-weight: 500;
     font-family: sans-serif;
     text-align: right;
     color: var(--navy);
 }
 
-/* Container for the about me */
-.container {
+/* Container Right column content */
+container {
     display: flex;
     flex-wrap: wrap;
-    width: 75%;
-    padding-bottom: 16px;
-    margin-top: 32px;
-    margin-left: 16px;
-    margin-bottom: 32px;
+    flex: 4;
+    padding: 0px 0px 4px 56px;
+    margin: 24px 56px 16px 16px;
     border-left: solid var(--navy);
 }
 
-/* Text for the about me */
-.container p {
-    padding: 0px 0px 16px 56px;
-    margin-left: 16px;
-    line-height: 150%;
+/* Hidden h2 for small screens */
+#about-me h2{
+    display:none;
 }
 
-/* Container for 'my work' section */
-.work {
-    display: flex;
-    flex-wrap: wrap;
+/* Text for the about me */
+container p {
+    line-height: 150%;
+    padding-bottom: 16px;
+}
+
+/* About Me bottom padding */
+container p:last-child {
+    padding-bottom: 0px;
+}
+
+/* Hidden h2 for small screens */
+ #my-work h2{
+    display:none;
 }
 
 /* Large card format */
 .large-card {
-    padding: 8px 0px 32px 56px;
     height: 400px;
     width: 100%;
 }
 
 /* Image on large card */
-.large-card img{
+.large-card img {
     height: 400px;
     width: 100%;
     object-fit: cover;
@@ -134,42 +180,27 @@ h2 {
     border-radius: 4px;
 } 
 
-/* Text box on large cards */
+/* Large Card hover behavior */
+.large-card:hover {
+    opacity: 50%;
+    cursor: pointer;
+}
+
+.large-card a:hover, a:active, a:visited, a:link {
+    color: var(--dark-navy);
+}
+
+/* Text box on cards */
 .card-header {
     position: absolute;
     margin-top: -80px;
     background: var(--seafoam);
-    width: fit-content;
-    height: fit-content;
     padding: 8px 16px 8px 32px;
     text-align: left;
     color: var(--dark-navy);
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(2, 2fr);
-    grid-column-gap: 8px;
-    grid-row-gap: 8px;
-    padding: 0px 0px 32px 56px;
-    margin-top: 16px;
-    width: 100%;
-}
-
-/* small card format */
-.small-card {
-    height: 200px;
-}
-
-/* Image on small card */
-.small-card img{
-    height: 200px;
-    width: 100%;
-    object-fit: cover;
-    object-position: top;
-    border: solid 4px var(--seafoam);
-} 
-
+/* Card Header Title */
 h3 {
     line-height: 150%;
     font-size: 24px;
@@ -177,9 +208,182 @@ h3 {
     font-family: sans-serif;
 }
 
+/* Card Header Subtitle */
 h4 {
     font-family: serif;
     font-size: 12px;
     font-weight: 400;
     text-transform: uppercase;
 }
+
+/* Grid layout */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    grid-column-gap: 8px;
+    grid-row-gap: 8px;
+    margin-top: 8px;
+    width: 100%;
+}
+
+/* Small card format */
+.small-card {
+    height: 150px;
+}
+
+/* Image on small card */
+.small-card img{
+    height: 150px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    border: solid 4px var(--seafoam);
+} 
+
+/* Small Card hover behavior */
+.small-card:hover {
+    opacity: 50%;
+    cursor:pointer;
+}
+
+/* Align contact section vertically */
+.contact-me {
+    display:block;
+}
+
+/* Hidden Small Screen Header */
+#contact-me h2{
+    display:none;
+}
+
+/* Contact Me list */
+.contact {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 4;
+    padding: 32px 0px;
+    justify-content: space-between;
+}
+
+/* Contact Me Links */
+.contact li {
+    /* text-decoration-line: underline; */
+    color: var(--navy);
+    font-size: 20px;
+    font-weight: 600;
+    padding-bottom: 2px;
+    border-bottom: solid 3px var(--navy);
+}
+
+.contact a:visited, a:link, a:active {
+    color: var(--navy);
+    text-decoration: none;
+}
+
+.contact a:hover {
+    color: var(--salmon);
+    border-bottom: solid 3px var(--salmon);
+    cursor: pointer;
+}
+
+/* Tablets - No Change because the flex boxes accomodate tablet width fine */
+  
+/* Large smartphones - section titles change to inline */
+@media screen and (max-width: 800px) {
+
+    /* Nav title and links stack */
+    nav { 
+        flex-flow: column wrap;
+        align-items: center;
+    }
+
+    /* Nav title is centered and fills more lateral space */
+    nav h1 {
+        text-align: center;
+        padding: 8px 80px 0px 80px;
+    }
+
+    /* side margins smaller */
+    main {
+        margin-left: 8px;
+    }
+
+    /* Hide sidebar */
+    aside {
+        display:none;
+    }
+
+    /* Sections get tighter horizontally */
+    container {
+        padding-left:0px;
+        border-left: none;
+        margin: 24px 24px 24px 24px;
+    }
+
+    /* Column titles move inline*/ 
+        /* Note:(these could be consolidated, but the contact-me one is a little different 
+            and they each had to have id's for the jump-to function to work anyway */
+
+    #about-me h2{
+        display:inline;
+        padding-bottom:2px;
+        margin-bottom: 16px;
+    }
+
+    #my-work h2{
+        display:inline;
+        padding-bottom:2px;
+        margin-bottom: 16px;
+    }
+
+    #contact-me h2{
+        display:inline;
+        padding-bottom:2px;
+        margin-top: 8px;
+    }
+}
+  
+/* Small smartphones - make grid full-width */
+@media screen and (max-width: 576px) {
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        margin: 8px auto 16px auto;
+    }
+
+    nav li {
+        margin: 8px 12px;
+        font-size: 16px;
+    }
+
+    h2 {
+        font-size: 32px;
+        margin-top: 16px;
+       }
+
+    .grid {
+        grid-template-columns: repeat(1, 2fr);
+        } 
+
+    section {
+        margin: 8px;
+    }
+
+    container {
+        padding-left:0px;
+        border-left: none;
+        margin: 8px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    .card-header {
+        padding: 8px;
+    }
+
+    .contact li {
+        margin-bottom: 8px;
+    }
+} 

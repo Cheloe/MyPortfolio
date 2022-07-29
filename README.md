@@ -22,28 +22,16 @@ Create a responsive professional portfolio site
 17. Made sure html and CSS had pretty good notes.
 18. Cleared browser default hover behaviors for anchors (I hope). Styled same. 
 
+## Link to Repository
+
+https://github.com/Cheloe/Module-02-Challenge
+
 ## Link to live site
 
+ https://cheloe.github.io/Module-02-Challenge/
 
-## Here's a screenshot:
+## Here are some screenshots:
 
 ![Portfolio Screenshot](./assets/Images/7-Portfolio-Screenshot.png)
 
 ![Portfolio Screenshot Mobile](./assets/Images/8-Portfolio-Mobile.png)
-
-
-## Grading
-
-* Deployed at URL
-* Loads w/o errors
-* GitHub URL submitted
-* GitHub repo has code
-
-* Application has functionality shown in challenge
-
-* Repository has unique name
-* Repository follows best practice for file structure and naming conventions
-* Best practices for class/id naming, indentation, commenting, etc. 
-* Multiple descriptive commit messages
-* Readme with description, screenshot, link to deployed application
-* 
